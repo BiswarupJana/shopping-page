@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styleakbar.css">
+    <link rel="stylesheet" href="./js/animation.js">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AKBAR</title>
 </head>
 <body>
-    <div>
-        book
-        <p>read</p>
-        <li>fl</li>
+    <div >
+        <div>
+           <div class="headtotal">
+            <p class="head">AK & RAJ</p>
+            <p class="subhead"><i><u>The Car Gallary</u></i></p>
+            <p>book</p>
+           </div>
+                <div class="topnav">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <input type="text" placeholder="Search..">
+                  </div>
+            <div class="total"> 
+                
+               
+                <P>1. MARUTI SUZUKI ALTO</P>
+                <P>COST:100000.00 rs.</P>
+                <p>Ph. No:9832133863</p>
+                <p class="car1">
+                <img src="photo.png" alt="">
+                <img src="photo1.jpg" alt="stearing">
+                <img src="photo2.jpeg" alt="">
+                <img src="photo3.jpeg" alt="">
+                <img src="photo4.jpeg" alt="">
+                <img src="photo5.jpeg" alt="">
+                <img src="photo6.jpeg" alt="">
+                <img src="photo7.jpeg" alt="">
+                <img src="photo8.jpeg" alt="">
+            </p>
+            
+            </div>
+            
+        </div>
     </div>
-
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="photo1.jpg" alt="Los Angeles">
+          </div>
+      
+          <div class="item">
+            <img src="photo2.jpeg" alt="Chicago">
+          </div>
+      
+          <div class="item">
+            <img src="photo3.jpeg" alt="New York">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    
 </body>
 </html>
