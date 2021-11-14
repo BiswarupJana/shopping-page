@@ -1,82 +1,267 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
-  <head>
-    <link rel="stylesheet" href="./css/linkstyle.css">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
-    type="text/javascript" charset="utf-8"></script>
-    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
-    type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
-    <title>BISWARUP</title>
-  </head>
-  <body>
-    <div>
-      <div>
-        <div style="width: 640px; height: 480px" id="mapContainer"></div>
-    <script>
-      // Initialize the platform object:
-      var platform = new H.service.Platform({
-        'apikey': 'PG7ABVerh6z7BLhb8-_ZXdSxsZc3TmbrQ0FrCDjg92k'
-      });
 
-      // Obtain the default map types from the platform object
-      var maptypes = platform.createDefaultLayers();
+<head>
+  <title>Lifestyle Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/page_background.css">
+  <link rel="stylesheet" href="php/login.php">
+  <link rel="stylesheet" href="js/animation.js">
 
-      var svgMarkup = '<svg width="24" height="24" ' +
-    'xmlns="http://www.w3.org/2000/svg">' +
-    '<rect stroke="white" fill="#1b468d" x="1" y="1" width="22" ' +
-    'height="22" /><text x="12" y="18" font-size="12pt" ' +
-    'font-family="Arial" font-weight="bold" text-anchor="middle" ' +
-    'fill="white">H</text></svg>';
-    
+</head>
 
-    // Create an icon, an object holding the latitude and longitude, and a marker:
-    var icon = new H.map.Icon(svgMarkup),
-        coords = { 
-              lat: 21.7766255, 
-              lng: 87.7342039 
-            },
-        marker = new H.map.Marker(coords, {icon: icon});
-        
-
-      // Instantiate (and display) a map object:
-      var map = new H.Map(
-        document.getElementById('mapContainer'),
-        maptypes.vector.normal.map,
-        {
-          zoom: 15.5,
-          center: { 
-              lat: 21.776, 
-              lng: 87.734 
-            }
-
-        });
-
-        map.addObject(marker);
-        map.setCenter(coords);
-
-        // Enable the event system on the map instance:
-        var mapEvents = new H.mapevents.MapEvents(map);
-
-        // Instantiate the default behavior, providing the mapEvents object:
-        new H.mapevents.Behavior(mapEvents);
-    </script>
+<body>
+  
+  <!-- Navbar -->
+  <div class="nav-bar">
+    <div class="logo">
+      <a href="#">Lifestyle Logo</a>
+    </div>
+    <div class="nav-buttons">
+      <div class="cart-button">
+        <button onclick="document.getElementById('cart-modal').style.display='block'" style="width:auto;">Contact Us</button>
       </div>
-      <div class="total">
-        <div>
-            <h4>Link Dictionary</h4>
-            <li>movi links</li>
-            
-
+      <div class="settings-button">
+        <button onclick="document.getElementById('reset-password-modal').style.display='block'" style="width:auto;">Setting</button>
+      </div>
+      <div class="About-Us">
+        <button onclick="document.getElementById('About-Us').style.display='block'" style="width:auto;">About-Us</button>
+      </div>
+      <div class="signup-button">
+        <button onclick="document.getElementById('sign-up-modal').style.display='block'" style="width:auto;">Sign Up</button>
+      </div>
+      <div class="login-button">
+        <button onclick="document.getElementById('login-modal').style.display='block'" style="width:auto;">Login</button>
+      </div>
+    </div>
+  </div>
+  <!-- Page Body -->
+  <div class="main-container">
+    <div class="content">
+      <div class="banner-image">
+        <div class="inner-banner-image">
+          <center>
+            <div class="banner-content">
+              <h1>We sell lifestyle</h1>
+              <p>
+                Flat 40% OFF on premium brands
+              </p>
+              <a href="#" link class="button">
+                Shop Now
+              </a>
+            </div>
+          </center>
         </div>
-        <img src="profile.jpg" alt="photo" >
-        <img src="" alt="">
+      </div>
     </div>
-    <div>
-        <li>hkhjk</li>
+    <div class="container">
+      <div class="items">
+        <a href="#">
+          <img <script src="watch.jpg" class="thumbnail">
+          <div class="caption">
+            <center>
+              <h2>
+                Watches
+              </h2>
+              <div class="order-now">
+                <button type="submit">Order Now</button>
+              </div>
+              <p>Original watches from the best brands.</p>
+            </center>
+          </div>
+        </a>
+      </div>
+      <div class="items">
+        <a href="#">
+          <img src="camera.jpg" class="thumbnail">
+          <div class="caption">
+            <center>
+              <h2>
+                Camera
+              </h2>
+              <div class="order-now">
+                <button type="submit">Order Now</button>
+              </div>
+              <p>Choose among the best available in the world.</p>
+            </center>
+          </div>
+        </a>
+      </div>
+      <div class="items">
+        <a href="#">
+          <img src="shirt.jpg" class="thumbnail">
+          <div class="caption">
+            <center>
+              <h2>
+                Watches
+              </h2>
+              <div class="order-now">
+                <button type="submit">Order Now</button>
+              </div>
+                            <p>Our exquisite collections of shirts.</p>
+            </center>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="end">
+    <div class="container">
+      <center>
+        <p>Copyright &copy; Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000.</p>
+      </center>
+    </div>
+  </footer>
 
+  <!-- Modals -->
+  <div class="modals">
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+      <form class="modal-content animate" action="/login.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('cart-modal').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+          <h2>CONTACT US</h2>
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Name" name="name" required>
+
+          <label for="uname"><b>Email:</b></label>
+          <input type="text" placeholder="Email" name="Email" required>
+
+          <label for="psw"><b>Message:</b></label>
+          <input type="text" placeholder="Type Message" name="Message" required>
+          <button type="submit">Submit</button>
+        </div>
+
+        <div class="container" style="background-color:#3c90b8">
+          <button type="button" onclick="document.getElementById('cart-modal').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
     </div>
+
+    <!-- Reset Password Modal -->
+    <div id="reset-password-modal" class="modal">
+      <form class="modal-content animate" action="/php/login.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('reset-password-modal').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+          <h2>Change Password</h2>
+          <label for="uname"><b>Old Password</b></label>
+          <input type="text" placeholder="Enter Old Password" name="uname" required>
+
+          <label for="uname"><b>Enter New Password</b></label>
+          <input type="text" placeholder="Enter New Password" name="uname" required>
+
+          <label for="psw"><b>Re-enter New Password</b></label>
+          <input type="password" placeholder="Re-enter New Password" name="psw" required>
+          <button type="submit">Change</button>
+        </div>
+        <div class="container" style="background-color:#3c90b8">
+          <button type="button" onclick="document.getElementById('reset-password-modal').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sing Up Modal -->
+    <div id="sign-up-modal" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('sign-up-modal').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+          <h2>Sign Up</h2>
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="uname" required>
+
+          <label for="uname"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="uname"><b>Contact</b></label>
+          <input type="text" placeholder="Contact NO." name="uname" required>
+
+          <label for="uname"><b>City</b></label>
+          <input type="text" placeholder="Enter City" name="uname" required>
+
+          <label for="uname"><b>Address</b></label>
+          <input type="text" placeholder="Enter Address" name="uname" required>
+
+          <button type="submit">Submit</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#3c90b8">
+          <button type="button" onclick="document.getElementById('sign-up-modal').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <form class="modal-content animate" action="/php/login.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('login-modal').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+          <h2>Log In</h2>
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color: #3c90b8">
+          <button type="button" onclick="document.getElementById('login-modal').style.display='none'"
+            class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
     </div>
     
-  </body>
+    <!--About-Us Modal-->
+    <div id="About-Us" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('About-Us').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+          <img src="about.png" alt="">
+        </div>
+        <div class="container" style="background-color:#3c90b8">
+          <button type="button" onclick="document.getElementById('About-Us').style.display='none'"
+            class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</body>
 </html>
